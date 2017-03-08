@@ -35,11 +35,12 @@ while n!=0 and i.lower()!="o":							# Tant que tout les pas n'ont pas été tes
 	
 if n!=0 :									# Si la boucle s'est arrêtée avant que n n'arrive à 0,
 	print("\nLe pas de décalage était de", n+1, "\n")			# C'est que l'utilisateur à attesté de la cohérence d'un texte décrypté pour un certain pas.
-	print("Le texte décodé est donc :\n")
+	print("Le texte décodé est donc :")
 	print(b)								# On affiche alors le texte décrypté.
 	
 else :										# Sinon, la boucle s'arrête lorsque n=0, donc le texte codé ne l'était pas en César.
 	print("\nLe texte proposé au lancement du programme n'était pas en code César.\n")
 	print(c)
-os.system("pause")								# Permet au programme de s'executer dans la console et d'être lisible par l'utilisateur.
-										
+
+input("\nTapez n'importe quel caractère pour fermer le programme...\n")		# Permet au programme de s'executer dans la console et d'être lisible par l'utilisateur.
+										 
