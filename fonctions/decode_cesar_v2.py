@@ -44,4 +44,4 @@ if __name__ == "__main__":								# Permet de tester le bon fonctionnement de la
 	c="cZz 1 ?"
 	print("", decode_cesar1(c, 1))
 	print("Si la fonction s'execute correctement, elle doit afficher 'dAa 1 ?'")
-	os.system("pause")
+	input("Tapez n'importe quel caractère pour fermer la fenêtre...")

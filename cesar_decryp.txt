@@ -1,0 +1,29 @@
+En cryptographie, le chiffrement par decalage, aussi connu comme le chiffre de Cesar 
+ou le code de Cesar (voir les differents noms), est une methode de chiffrement tres
+simple utilisee par Jules Cesar dans ses correspondances secretes (ce qui explique
+le nom « chiffre de Cesar »).
+
+Le texte chiffre s'obtient en remplaçant chaque lettre du texte clair original par
+une lettre a distance fixe, toujours du meme côte, dans l'ordre de l'alphabet. Pour
+les dernieres lettres (dans le cas d'un decalage a droite), on reprend au debut.
+Par exemple avec un decalage de 3 vers la droite, A est remplace par D, B devient E,
+et ainsi jusqu'a W qui devient Z, puis X devient A etc. Il s'agit d'une permutation
+circulaire de l'alphabet. La longueur du decalage, 3 dans l'exemple evoque, constitue
+la cle du chiffrement qu'il suffit de transmettre au destinataire — s'il sait deja
+qu'il s'agit d'un chiffrement de Cesar — pour que celui-ci puisse dechiffrer le message.
+Dans le cas de l'alphabet latin, le chiffre de Cesar n'a que 26 cles possibles (y
+compris la cle nulle, qui ne modifie pas le texte).
+
+Il s'agit d'un cas particulier de chiffrement par substitution monoalphabetique :
+ces substitutions reposent sur un principe analogue, mais sont obtenues par des
+permutations quelconques des lettres de l'alphabet. Dans le cas general, la cle
+est donnee par la permutation, et le nombre de cles possibles est alors sans
+commune mesure avec celui des chiffrements de Cesar.
+
+Le chiffrement de Cesar a pu etre utilise comme element d'une methode plus complexe,
+comme le chiffre de Vigenere. Seul, il n'offre aucune securite de communication,
+a cause du tres faible nombre de cles, ce qui permet d'essayer systematiquement
+celles-ci quand la methode de chiffrement est connue, mais aussi parce que, comme
+tout encodage par substitution monoalphabetique, il peut etre tres rapidement
+"casse" par analyse de frequences (certaines lettres apparaissent beaucoup plus
+souvent que les autres dans une langue naturelle).

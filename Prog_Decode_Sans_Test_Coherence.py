@@ -9,8 +9,10 @@
 """
 
 import os									# Importation des fonctions nécessaires à l'execution du code.
-from fonctions.decode_cesar_v2 import *						# Dont la fonction decode_cesar1 présente dans le fichier du même nom						
-c=str()										# Variable qui contiendra le texte crypté.
+from fonctions.decode_cesar_v2 import *						# Dont la fonction decode_cesar1 présente dans le fichier du même nom	
+f_exp = open ("cesar_cryp.txt","r")						# Fonction permettant l'exportation du texte crypté contenu dans le fichier cesar_cryp.txt
+f_imp = open ("cesar_decryp.txt","w")						# Fonction permettant l'importation du texte décrypté dans le fichier cesar_décryp.txt
+c=f_exp.read()									# Variable qui contient le texte crypté.
 n=25										# Variable contenant le pas, égal à 25 au départ.
 b=str()										# Variable qui contiendra le texte décrypté.
 i=str()										# Variable permettant d'intéragir avec l'utilisateur.
@@ -23,8 +25,7 @@ print("Le premier test étant effectué avec un pas égal à 25")
 print("La casse est préservé.")
 print("Une MAJUSCULE renvoie une MAJUSCULE, et une minuscule renvoie une minuscule.")
 print("Les caractères autres qu'alphabétique sont préservés.\n")
-
-c=input("Entrez la chaîne à décoder.\n")					# On demande à l'utilisateur d'entrer le texte à décrypter.
+				
 while n!=0 and i.lower()!="o":							# Tant que tout les pas n'ont pas été testé,
 	print("\nTentative de décryptage avec un pas n =",n,"\n")		# Ou que l'utilisateur n'atteste pas de la cohérence du texte testé au pas actuel,
 	b=decode_cesar1(c, n)							# La boucle continue de tourner.
@@ -41,6 +42,11 @@ if n!=0 :									# Si la boucle s'est arrêtée avant que n n'arrive à 0,
 else :										# Sinon, la boucle s'arrête lorsque n=0, donc le texte codé ne l'était pas en César.
 	print("\nLe texte proposé au lancement du programme n'était pas en code César.\n")
 	print(c)
+	
+f_imp.write(b)
+f_exp.close()
+f_imp.close()
+print("\nLe texté décrypté à été enregistré dans le fichier cesar_decryp.txt !")
 
 input("\nTapez n'importe quel caractère pour fermer le programme...\n")		# Permet au programme de s'executer dans la console et d'être lisible par l'utilisateur.
 										 
