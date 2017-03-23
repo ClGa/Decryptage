@@ -1,8 +1,8 @@
 #!/usr/bin/env python3.5
 # -*- coding:utf-8 -*-
 
-""" Fichier comportant la v1 du programme Decode_Cesar permettant de décoder n'importe quel texte crypté par le code de César.
-	Pour ce faire, chaque pas de 0 à 25 est testé et le résultat du décodage par la fonction decode_cesar_v2 est affiché.
+""" Fichier comportant le programme Decode_Cesar permettant de décoder n'importe quel texte crypté par le code de César.
+	Pour ce faire, chaque pas de 0 à 25 est testé dans l'ordre décroissant et le résultat du décodage par la fonction decode_cesar_v2 est affiché.
 	Si le texte est cohérent, l'utilisateur saisit 'o' pour oui et le programme s'arrête.
 	Sinon, il saisit 'n' pour non et le programme passe au pas suivant.
 	Les pas sont testés dans l'ordre décroissant, en commençant par n=25.
@@ -17,7 +17,7 @@ n=25										# Variable contenant le pas, égal à 25 au départ.
 b=str()										# Variable qui contiendra le texte décrypté.
 i=str()										# Variable permettant d'intéragir avec l'utilisateur.
 titre=str("Bienvenue dans le programme Decode_Cesar !")				# Présentations du programme.
-print("", titre.upper().center(115),"\n")
+print("", titre.upper().center(75),"\n")
 print("Dans ce programme, chaque pas est testé.")
 print("Il est demandé à l'utilisateur d'attester de la cohérence du texte décodé pour chaque pas.")
 print("En cas de non cohérence, le pas suivant est testé, dans l'ordre décroissant.")
@@ -25,6 +25,7 @@ print("Le premier test étant effectué avec un pas égal à 25")
 print("La casse est préservé.")
 print("Une MAJUSCULE renvoie une MAJUSCULE, et une minuscule renvoie une minuscule.")
 print("Les caractères autres qu'alphabétique sont préservés.\n")
+input("Appuyez sur n'importe quelle touche pour lancer le décryptage...\n")
 				
 while n!=0 and i.lower()!="o":							# Tant que tout les pas n'ont pas été testé,
 	print("\nTentative de décryptage avec un pas n =",n,"\n")		# Ou que l'utilisateur n'atteste pas de la cohérence du texte testé au pas actuel,
